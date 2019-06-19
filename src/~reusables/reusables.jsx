@@ -1,8 +1,5 @@
 //variables
 export const color_light = '#ffffff';
-export const color_accent = '#219ea4';
-export const color_warning = '#f87d7d';
-export const color_subtle = '#d3d3d3';
 export const color_transparent = 'rgba(0,0,0,0)'
 export const shadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
 export const header_font = "'PT Sans', sans-serif";
