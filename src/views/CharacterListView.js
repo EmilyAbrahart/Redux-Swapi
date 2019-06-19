@@ -148,7 +148,9 @@ class CharacterListView extends React.Component {
 		return (
 			<CharListWrapper>
 				<CharListHeader>Star Wars Characters</CharListHeader>
-				<FetchButton>Refresh Characters</FetchButton>
+				<FetchButton onClick={() => this.props.fetchData()}>
+					Refresh Characters
+				</FetchButton>
 				<CharacterList characters={this.props.characters} />
 			</CharListWrapper>
 		);
