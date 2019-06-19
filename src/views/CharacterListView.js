@@ -7,7 +7,11 @@ import {
 	FlexFunc,
 	color_light,
 	header_font,
-	text_font
+	text_font,
+	shadow,
+	Button,
+	color_transparent,
+	color_background
 } from './../~reusables/reusables';
 
 const CharListWrapper = styled.div`
@@ -16,8 +20,9 @@ const CharListWrapper = styled.div`
 	font-family: ${text_font};
 `;
 const CharListHeader = styled.h1`
-	font-size: 3rem;
+	font-size: 4rem;
 	font-family: ${header_font};
+	text-shadow: ${shadow};
 `;
 const SpinnerDiv = styled.div`
 	.lds-spinner {
@@ -100,6 +105,16 @@ const SpinnerDiv = styled.div`
 	}
 `;
 
+const FetchButton = styled.button`
+	${Button(color_transparent, color_light)};
+	font-family: ${header_font};
+	font-size: 1.3rem;
+
+	&:hover {
+		color: ${color_background};
+	}
+`;
+
 class CharacterListView extends React.Component {
 	constructor() {
 		super();
@@ -133,6 +148,7 @@ class CharacterListView extends React.Component {
 		return (
 			<CharListWrapper>
 				<CharListHeader>Star Wars Characters</CharListHeader>
+				<FetchButton>Refresh Characters</FetchButton>
 				<CharacterList characters={this.props.characters} />
 			</CharListWrapper>
 		);
